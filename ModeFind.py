@@ -5,9 +5,14 @@ def get_key(val, my_dict):
     :param my_dict: A dictionary
     :return: Will return key against specific value.
     """
+    ls = []
     for key, value in my_dict.items():
         if val == value:
-            return key
+            ls.append(key)
+    if len(ls) > 1:
+        return key
+    else:
+        return ls[0]
 
     return "key doesn't exist"
 
