@@ -10,7 +10,8 @@ def get_key(val, my_dict):
         if val == value:
             ls.append(key)
     if len(ls) > 1:
-        return key
+        ls.sort()
+        return ls[0]
     else:
         return ls[0]
 
