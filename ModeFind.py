@@ -1,4 +1,10 @@
 def get_key(val, my_dict):
+    """
+
+    :param val: An Integer
+    :param my_dict: A dictionary
+    :return: Will return key against specific value.
+    """
     for key, value in my_dict.items():
         if val == value:
             return key
@@ -6,11 +12,23 @@ def get_key(val, my_dict):
     return "key doesn't exist"
 
 def nonRepeatingVal(newls, mode):
+    """
+
+    :param newls: A list
+    :param mode:  An Integer
+    :return: Will return 1 if it will find same value as saved in mode var
+    otherwise will return 0.
+    """
     for i in range(len(newls)):
         if newls[i] == mode:
             return 1
     return 0
 def myMode(ls):
+    """
+
+    :param ls: A list
+    This function will calculate the mode with help of other functions.
+    """
     print(ls)
     newls = []
     dict = {}
@@ -31,14 +49,14 @@ def myMode(ls):
     print(f"So the mode is : {key}")
 
 
+if __name__ == '__main__':
+    n = int(input("Enter size of list : "))
+    ls = []
+    for i in range(n):
+        val = int(input(f"Enter value in index {i} : "))
+        ls.append(val)
 
-n = int(input("Enter size of list : "))
-ls = []
-for i in range(n):
-    val = int(input(f"Enter value in index {i} : "))
-    ls.append(val)
-
-myMode(ls)
+    myMode(ls)
 
 
 
